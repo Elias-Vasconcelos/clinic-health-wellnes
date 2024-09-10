@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+
+.Btn {
+  text-decoration: none;
+  padding: 4px 16px;
+  color: #4682b4;
+  border: 1px solid #4682b4;
+  border-radius: 32px;
+
+  @media (max-width: 350px) {
+    padding: 4px;
+  }
+}
