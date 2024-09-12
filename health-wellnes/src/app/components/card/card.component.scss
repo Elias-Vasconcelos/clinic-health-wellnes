@@ -1,0 +1,141 @@
+.Card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  background-size: cover;
+  border-radius: 28px;
+  border: 1px solid black;
+  box-shadow: 8px 8px 100px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 28px;
+  }
+
+  .Content {
+    position: absolute;
+    z-index: 2;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    color: white;
+
+    h4 {
+      font-size: 24px;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 12px;
+      }
+    }
+
+    .Stars {
+      max-width: 100%;
+      height: 32px;
+      margin: 8px;
+
+      @media (max-width: 768px) {
+        height: 14px;
+        object-fit: cover;
+      }
+    }
+
+    .Houver {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @media (max-width: 480px) {
+        max-height: 50px;
+      }
+
+      p {
+        font-size: 14px;
+        width: 85%;
+        text-align: center;
+
+        @media (max-width: 480px) {
+          font-size: 8px;
+        }
+      }
+
+      a {
+        width: 128px;
+        text-align: center;
+        margin: 8px;
+
+        @media (max-width: 768px) {
+          width: 80%;
+          font-size: 10px;
+        }
+      }
+    }
+    .Houver.visible {
+      animation: Open 1s;
+      animation-fill-mode: forwards;
+      display: flex;
+    }
+    .invisible {
+      animation: Close 1s;
+      animation-fill-mode: forwards;
+      display: flex;
+      opacity: 0;
+      height: 0;
+    }
+  }
+}
+
+@keyframes Open {
+  0% {
+    opacity: 0;
+    transform: translateY(+100px);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    height: 0;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    height: 120px;
+  }
+}
+
+@keyframes Close {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    height: 120px;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(+100px);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    height: 0;
+  }
+}

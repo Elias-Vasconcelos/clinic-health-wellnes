@@ -1,0 +1,10 @@
+<li class="Card" [style.background-image]="'url(' + CardContent.image + ')'">
+  <div #card class="Content">
+    <h4>{{ CardContent.title }}</h4>
+    <img src="../../../assets/Stars.png" alt="rating" class="Stars" />
+    <div #houver class="Houver invisible">
+      <p>{{ CardContent.description }}</p>
+      <a href="#" class="Btn"> See more </a>
+    </div>
+  </div>
+</li>
