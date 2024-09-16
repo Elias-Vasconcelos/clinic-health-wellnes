@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeroComponent } from './components/hero/hero.component';
 import { CardListComponent } from './components/card-list/card-list.component';
+import { AboutComponent } from './components/about/about.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroComponent, CardListComponent],
+  imports: [RouterOutlet, HeroComponent, CardListComponent, AboutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
