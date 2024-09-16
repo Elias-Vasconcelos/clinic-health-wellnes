@@ -13,13 +13,22 @@
       <img src="../../../assets/Baner2.png" class="biger" alt="Baner" />
     </li>
   </ul>
-  <ul class="abaout-content">
-    <li class="abaout-content_img">
-      <img src="" alt="" />
+  <ul class="about-content">
+    <li class="about-content_img">
+      <img src="../../../assets/content-img.jpg" alt="content-img" />
     </li>
     <li>
       <h4>How we work</h4>
-      <h3></h3>
+      <h3>always here for you</h3>
+      <ul class="about-content_list">
+        <li *ngFor="let card of AboutCard">
+          <div>
+            <img [src]="card.image" [alt]="card.image" />
+            <p>{{ card.title }}</p>
+          </div>
+          <p>{{ card.description }}</p>
+        </li>
+      </ul>
     </li>
   </ul>
 </section>
