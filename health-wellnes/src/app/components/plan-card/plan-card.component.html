@@ -1,0 +1,21 @@
+<li class="PlanCard">
+  <div #PlanCard class="card">
+    <div class="Content Front">
+      <img [src]="PlanContent.image" [alt]="PlanContent.image" />
+      <h3>{{ PlanContent.title }}</h3>
+      <p>{{ PlanContent.description }}</p>
+      <span #FrontBtn href="" class="Btn">See more</span>
+    </div>
+    <div class="Content Back">
+      <h3>Benefits of the plan</h3>
+      <h4>{{ PlanContent.Price }}<b>/month</b></h4>
+      <ul>
+        <li *ngFor="let item of PlanContent.Benefits">
+          <img src="../../../assets/CheckIcon.png" alt="CheckIcon" />
+          <p>{{ item }}</p>
+        </li>
+      </ul>
+      <span #BackBtn href="" class="Btn">Subscribe</span>
+    </div>
+  </div>
+</li>

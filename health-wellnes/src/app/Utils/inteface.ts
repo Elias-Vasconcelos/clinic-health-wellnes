@@ -4,3 +4,8 @@ export interface Card {
   description: string;
   image: string;
 }
+
+export interface Plan extends Card {
+  Price: string;
+  Benefits: string[];
+}

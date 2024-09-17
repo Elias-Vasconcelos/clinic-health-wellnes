@@ -1,0 +1,15 @@
+.Plans {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+
+  .List {
+    max-width: 1035px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}

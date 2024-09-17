@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+.PlanCard {
+  perspective: 1000px;
+  font-family: "Nunito";
+
+  .card {
+    display: flex;
+    justify-content: center;
+    transition: ease-in-out 1.2s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 320px;
+    height: 520px;
+
+    .Content {
+      position: absolute;
+      backface-visibility: hidden;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      border: 1px solid #4682b4;
+      border-radius: 20px;
+
+      h3 {
+        font-size: 26px;
+        color: #4682b4;
+        margin-bottom: 16px;
+        width: 100%;
+        height: 32px;
+        text-align: center;
+      }
+
+      span {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        background-color: #4682b4;
+        width: 184px;
+        height: 40px;
+      }
+    }
+  }
+
+  .flip {
+    transform: rotateY(180deg);
+  }
+
+  .Front {
+    transform: rotateY(0deg);
+    img {
+      margin-top: 10px;
+      width: 288px;
+      height: 168px;
+      margin-bottom: 25px;
+      object-fit: cover;
+      border: 1px solid #4682b4;
+      border-radius: 20px;
+    }
+    p {
+      width: 240px;
+      height: 200px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+  }
+
+  .Back {
+    transform: rotateY(180deg);
+    justify-content: center;
+    h4 {
+      font-size: 32px;
+      margin-bottom: 21px;
+      width: 192px;
+      height: 32px;
+      text-align: center;
+      b {
+        font-size: 14px;
+        color: #4682b4;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 232px;
+      height: 350px;
+      margin-bottom: 20px;
+      li {
+        display: flex;
+        justify-content: start;
+        img {
+          width: 32px;
+          height: 32px;
+          margin-right: 8px;
+        }
+        p {
+          width: 100%;
+          height: 28px;
+          margin-bottom: 11px;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
